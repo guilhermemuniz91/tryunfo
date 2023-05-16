@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class Form extends Component {
   render() {
-    // const {
-    //   cardName,
-    //   cardDescription,
-    //   cardAttr1,
-    //   cardAttr2,
-    //   cardAttr3,
-    //   cardImage,
-    //   cardRare,
-    //   cardTrunfo,
+    const {
+      cardName,
+      cardDescription,
+      cardAttr1,
+      cardAttr2,
+      cardAttr3,
+      cardImage,
+      cardRare,
+      cardTrunfo,
+      isSaveButtonDisabled,
+      onInputChange,
+      onSaveButtonClick,
+    } = this.props;
     //   hasTrunfo,
-    //   isSaveButtonDisabled,
-    //   onInputChange,
-    //   onSaveButtonClick,
-    // } = this.props;
 
     return (
       <form>
@@ -25,10 +25,10 @@ class Form extends Component {
           <input
             type="text"
             id="nomeDaCarta"
-            data-testid='name-input'
+            data-testid="name-input"
             name="cardName"
-            // value={ cardName }
-            // onChange={ onInputChange }
+            value={ cardName }
+            onChange={ onInputChange }
           />
         </label>
         <label htmlFor="descricaoCarta">
@@ -39,8 +39,8 @@ class Form extends Component {
             cols="30"
             rows="10"
             data-testid="description-input"
-            // value={ cardDescription }
-            // onChange={ onInputChange }
+            value={ cardDescription }
+            onChange={ onInputChange }
           />
         </label>
         <label htmlFor="forcaDaCarta">
@@ -50,8 +50,8 @@ class Form extends Component {
             id="forcaDaCarta"
             type="number"
             data-testid="attr1-input"
-            // value={ cardAttr1 }
-            // onChange={ onInputChange }
+            value={ cardAttr1 }
+            onChange={ onInputChange }
           />
         </label>
         <label htmlFor="defesaDaCarta">
@@ -61,8 +61,8 @@ class Form extends Component {
             id="defesaDaCarta"
             data-testid="attr2-input"
             name="cardAttr2"
-            // value={ cardAttr2 }
-            // onChange={ onInputChange }
+            value={ cardAttr2 }
+            onChange={ onInputChange }
           />
         </label>
         <label htmlFor="speedDaCarta">
@@ -72,8 +72,8 @@ class Form extends Component {
             id="speedDaCarta"
             data-testid="attr3-input"
             name="cardAttr3"
-            // value={ cardAttr3 }
-            // onChange={ onInputChange }
+            value={ cardAttr3 }
+            onChange={ onInputChange }
           />
         </label>
         <label htmlFor="imagemDaCarta">
@@ -83,8 +83,8 @@ class Form extends Component {
             id="imagemDaCarta"
             data-testid="image-input"
             name="cardImage"
-            // value={ cardImage }
-            // onChange={ onInputChange }
+            value={ cardImage }
+            onChange={ onInputChange }
           />
         </label>
         <label htmlFor="raridadeDaCarta">
@@ -93,8 +93,8 @@ class Form extends Component {
             name="cardRare"
             id="raridadeDaCarta"
             data-testid="rare-input"
-            // value={ cardRare }
-            // onChange={ onInputChange }
+            value={ cardRare }
+            onChange={ onInputChange }
           >
             <option value="normal">Normal</option>
             <option value="raro">Raro</option>
@@ -108,8 +108,8 @@ class Form extends Component {
             type="checkbox"
             id="superTrunfo"
             name="cardTrunfo"
-            // checked={ cardTrunfo }
-            // onChange={ onInputChange }
+            checked={ cardTrunfo }
+            onChange={ onInputChange }
           />
         </label>
         <button
@@ -117,8 +117,8 @@ class Form extends Component {
           data-testid="save-button"
           id="botaoSalvar"
           name="saveButton"
-        //   disabled={ isSaveButtonDisabled }
-        //   onClick={ onSaveButtonClick }
+          disabled={ isSaveButtonDisabled }
+          onClick={ onSaveButtonClick }
         >
           Salvar
         </button>
@@ -127,19 +127,19 @@ class Form extends Component {
   }
 }
 
-// Form.propTypes = {
-//   cardName: PropTypes.string.isRequired,
-//   cardDescription: PropTypes.string.isRequired,
-//   cardAttr1: PropTypes.string.isRequired,
-//   cardAttr2: PropTypes.string.isRequired,
-//   cardAttr3: PropTypes.string.isRequired,
-//   cardImage: PropTypes.string.isRequired,
-//   cardRare: PropTypes.string.isRequired,
-//   cardTrunfo: PropTypes.bool.isRequired,
-//   hasTrunfo: PropTypes.bool.isRequired,
-//   isSaveButtonDisabled: PropTypes.bool.isRequired,
-//   onInputChange: PropTypes.func.isRequired,
-//   onSaveButtonClick: PropTypes.func.isRequired,
-// };
+Form.propTypes = {
+  cardName: PropTypes.string.isRequired,
+  cardDescription: PropTypes.string.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+  cardImage: PropTypes.string.isRequired,
+  cardRare: PropTypes.string.isRequired,
+  cardTrunfo: PropTypes.bool.isRequired,
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  onInputChange: PropTypes.func.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+};
+// hasTrunfo: PropTypes.bool.isRequired,
 
 export default Form;
