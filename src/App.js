@@ -17,6 +17,15 @@ class App extends React.Component {
     // deckList: [],
   };
 
+  handleChange = (event) => {
+    const { target } = event;
+    const { name } = target;
+    const valueField = target.type === 'checkbox' ? target.checked : target.value;
+    this.setState({
+      [name]: valueField,
+    }, this.validationFields);
+  };
+
   render() {
     const { cardName, cardDescription,
       cardAttr1, cardAttr2, cardAttr3,
