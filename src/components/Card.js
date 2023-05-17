@@ -2,6 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 class Card extends React.Component {
+  isTrunfo(cardTrunfo) {
+    if (cardTrunfo) {
+      return (<p data-testid="trunfo-card">Super Trunfo</p>);
+    }
+    return (<p />);
+  }
+
   render() {
     const {
       cardName,
@@ -43,11 +50,10 @@ class Card extends React.Component {
             {cardAttr3}
           </li>
         </ul>
-        <p data-testid="rare-card">
-          Rare:
-          {cardRare}
-        </p>
-        {cardTrunfo && <p data-testid="trunfo-card">Super Trunfo</p>}
+
+        {this.isTrunfo(cardTrunfo)}
+
+        <p data-testid="rare-card">{cardRare}</p>
       </div>
     );
   }

@@ -89,6 +89,7 @@ class App extends React.Component {
       cardAttr1, cardAttr2, cardAttr3,
       cardImage, cardRare, cardTrunfo, hasTrunfo,
       isSaveButtonDisabled, deckList } = this.state;
+
     return (
       <main>
         <header><h1>Tryunfo</h1></header>
