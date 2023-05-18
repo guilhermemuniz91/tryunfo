@@ -2,23 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Form extends Component {
-  // isTrunfo = (hasTrunfo, cardTrunfo, onInputChange) => (
-  //   hasTrunfo === true
-  //     ? <p>Você já tem um Super Trunfo em seu baralho</p>
-  //     : (
-  //       <label htmlFor="cardTrunfo">
-  //         Super Trunfo
-  //         <input
-  //           type="checkbox"
-  //           name="cardTrunfo"
-  //           data-testid="trunfo-input"
-  //           checked={ cardTrunfo }
-  //           onChange={ onInputChange }
-  //         />
-  //       </label>
-  //     )
-  // );
-
   render() {
     const {
       cardName,
